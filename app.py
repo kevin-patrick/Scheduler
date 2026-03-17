@@ -64,6 +64,11 @@ if 'my_schedule' not in st.session_state:
 
 # --- SIDEBAR FILTERS ---
 st.sidebar.header("Search Filters")
+
+# Add the timestamp here
+st.sidebar.caption("🕒 **Schedule Last Updated:** 3/16/2026 at 5:09 PM")
+st.sidebar.divider() # Adds a nice visual line
+
 all_subjects = sorted([s for s in df['Subject'].unique() if s])
 sel_subjects = st.sidebar.multiselect("Subjects", all_subjects)
 
